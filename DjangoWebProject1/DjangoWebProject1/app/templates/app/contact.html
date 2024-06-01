@@ -1,0 +1,15 @@
+﻿{% extends "app/layout.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+
+<ul>
+    <li><a href="https://www.псковскийкирпичныйзавод.рф/"><img class="kartinka" src="{% static 'app/content/pks.png ' %}" alt="Logo 1"/>Производитель кирпича</a></li>
+    <li><a href="https://kvazar.ltd/"><img class="kartinka" src="{% static 'app/content/kvaz.jpg ' %}" alt="Logo 2"/>Производитель мебели</a></li>
+    <li><a href="https://sudomawood.ru/about-company/"><img class="kartinka" src="{% static 'app/content/sudoma.jpg ' %}" alt="Logo 3"/>Лесозавод «Судома»</a></li>
+</ul>
+
+{% endblock %}

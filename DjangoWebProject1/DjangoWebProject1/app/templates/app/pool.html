@@ -1,0 +1,70 @@
+{% extends "app/layout.html"%}
+{% block content %}
+{% if form != None %}
+
+<br> <h2>Оставте отзыв</h2><br>
+
+<div>
+    <form method="post">
+        {% csrf_token %}
+        <label for ="{{form.name.id_for_label}}">{{ form.name.label}}</label>
+        {{ form.name}}<br><br>
+        <label for ="{{form.city.id_for_label}}">{{ form.city.label}}</label>
+        {{ form.city}}<br><br>
+        <label for ="{{form.purchases.id_for_label}}">{{ form.purchases.label}}</label>
+        {{ form.purchases}}<br><br>
+        <label for ="{{form.grade.id_for_label}}">{{ form.grade.label}}</label>
+        {{ form.grade}}<br><br>
+        <label for ="{{form.message.id_for_label}}">{{ form.message.label}}</label>
+        {{ form.message}}<br><br>
+        <input type="submit" id="knop" value="Отправить">
+ 
+    </form>
+
+</div>
+<script>
+$(document).ready(function() {
+ $("#knop").hover(function() {
+ $(this).css("color", "#ff0000");
+ }, function() {
+ $(this).css("color", "#000000");
+ });
+
+$("#id_name").hover(function() {
+  $("#id_name").focus(function() {
+    $(this).css('background-color', '#b3e5fc');
+});
+  $("#id_name").blur(function() {
+    $(this).css('background-color', 'white');
+});
+});
+$("#id_city").hover(function() {
+  $("#id_city").focus(function() {
+    $(this).css('background-color', '#b3e5fc');
+});
+  $("#id_city").blur(function() {
+    $(this).css('background-color', 'white');
+});
+});
+$("#id_message").hover(function() {
+  $("#id_message").focus(function() {
+    $(this).css('background-color', '#b3e5fc');
+});
+  $("#id_message").blur(function() {
+    $(this).css('background-color', 'white');
+});
+});
+});
+</script>
+{% else %}
+<br><h2>Спасибо за отзыв!</h2>
+<h3>Вы отправили следующее</h3>
+<ul>
+    <li><span>Имя:</span>{{data.name}}</li>
+    <li><span>Город:</span>{{data.city}}</li>
+    <li><span>Покупки:</span>{{data.purchases}}</li>
+    <li><span>Оценка:</span>{{data.grade}}</li>
+    <li><span>Отзыв:</span>{{data.message}}</li>
+</ul>
+{% endif %}
+{% endblock %}

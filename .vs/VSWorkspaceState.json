@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\DjangoWebProject1",
+    "\\DjangoWebProject1\\DjangoWebProject1",
+    "\\DjangoWebProject1\\DjangoWebProject1\\app",
+    "\\DjangoWebProject1\\DjangoWebProject1\\app\\static",
+    "\\DjangoWebProject1\\DjangoWebProject1\\app\\static\\app",
+    "\\DjangoWebProject1\\DjangoWebProject1\\app\\static\\app\\content",
+    "\\DjangoWebProject1\\DjangoWebProject1\\app\\templates",
+    "\\DjangoWebProject1\\DjangoWebProject1\\app\\templates\\app",
+    "\\DjangoWebProject1\\DjangoWebProject1\\DjangoWebProject1"
+  ],
+  "SelectedNode": "\\DjangoWebProject1\\DjangoWebProject1\\app\\templates\\app\\contact.html",
+  "PreviewInSolutionExplorer": false
+}
